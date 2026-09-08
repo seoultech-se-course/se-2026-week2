@@ -18,4 +18,19 @@ public class Node {
     public boolean hasChild(Node child){
         return !children.isEmpty();
     }
+
+    public int height(){
+        if (children.isEmpty()) {
+            return 0;
+        } else {
+            int maxHeight = 0;
+            for (Node child : children) {
+                int childHeight = child.height();
+                if (childHeight > maxHeight) {
+                    maxHeight = childHeight;
+                }
+            }
+            return maxHeight + 1;
+        }
+    }
 }
