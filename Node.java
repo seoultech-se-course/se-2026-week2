@@ -14,4 +14,19 @@ public class Node {
     public void addChild(Node child) {
         this.children.add(child);
     }
+
+    public boolean hasChild() {
+        return !children.isEmpty();
+    }
+
+    public int height() {
+        if (children.isEmpty()) {
+            return 0;
+        }
+        int maxChildHeight = 0;
+        for (Node child : children) {
+            maxChildHeight = Math.max(maxChildHeight, child.height());
+        }
+        return 1 + maxChildHeight;
+    }
 }
