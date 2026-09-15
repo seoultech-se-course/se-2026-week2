@@ -15,14 +15,14 @@ public class Node {
         this.children.add(child);
     }
 
-    // DFS (깊이 우선 탐색) 메서드 추가
-    public void dfs() {
-        // 1. 현재 노드의 라벨(이름)을 출력합니다.
-        System.out.print(this.label + " ");
+    public void bfs(){
+        List<Node> queue = new ArrayList<>();
+        queue.add(this);
 
-        // 2. 자식 노드들을 순서대로 방문하며 재귀적으로 dfs()를 호출합니다.
-        for (Node child : this.children) {
-            child.dfs();
+        for (int i=0; i < queue.size(); i++){
+            Node node = queue.get(i);
+            System.out.println(node.label + " ");
+            queue.addAll(node.children);
         }
     }
 }
