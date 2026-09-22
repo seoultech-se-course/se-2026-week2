@@ -1,0 +1,37 @@
+# Java / JVM
+*.class
+*.log
+*.jar
+*.war
+*.ear
+*.nar
+hs_err_pid*
+replay_pid*
+
+# IDE / editors
+.vscode/
+.idea/
+*.iml
+*.swp
+*.swo
+*~
+
+# Build outputs
+bin/
+build/
+out/
+target/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Gradle / Maven (if used later)
+.gradle/
+.gradle-cache/
+.mvn/timing.properties
+.mvn/wrapper/maven-wrapper.jar
+
+# Local configs
+*.local
+.env
